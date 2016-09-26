@@ -73,3 +73,7 @@
 #right-sidebar{
     background-color: rgba(215, 215, 215, 1);
 }
+#messages{
+    float: left;
+    width: 100%;
+}
