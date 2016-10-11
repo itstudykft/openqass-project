@@ -77,3 +77,215 @@
     float: left;
     width: 100%;
 }
+.form-type-radios,
+.form-type-checkboxes {
+    float: left;
+    width: 100%;
+}
+.form-type-radi,
+.form-type-checkbox {
+    float: left;
+
+}
+.form-radios,
+.form-checkboxes{
+    float: left;
+    width: 100%;
+}
+.form-type-radio label,
+.form-type-checkbox label{
+    margin:4px;
+    padding: 0px 4px;
+    background-color: white;
+    border-radius:4px;
+    border:1px solid grey;
+
+    float:left;
+}
+.form-type-radio label:hover,
+.form-type-checkbox label:hover {
+    background:rgba(22, 155, 213, 1);
+}
+.form-type-radio input,
+.form-type-checkbox input{
+    display: none;
+}
+.form-type-radio input:checked + label,
+.form-type-checkbox input:checked + label {
+    background-color:rgba(22, 155, 213, 1);
+    color:#fff;
+    border: 1px solid rgba(22, 155, 213, 1);
+}
+.szurok .form-item
+{
+    margin: 0px;
+}
+
+.vertical-tabs{
+    float: left;
+    width: calc(100% - 15em);
+}
+input.pipalva + label{
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+.szurok{
+    font-size: 14px;
+    float: left;
+}
+.field-group-fieldset{
+    float: left;
+    width: 100%;
+}
+.fieldset-title{
+    float: left;
+}
+.fieldset-legend{
+    float: left;
+    width: 100%;
+}
+.fieldset-wrapper{
+    float: left;
+    width: 100%;
+}
+legend{
+    float: left;
+    margin-bottom: 0px;
+}
+fieldset.collapsed{
+    height: auto!important;
+}
+
+fieldset.field-group-fieldset{
+    background-color: rgb(170, 170, 170);
+    border-radius: 8px;
+    padding: 5px;
+    margin-bottom: 10px;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;
+}
+fieldset.main-group{
+    background-color: transparent;
+    border: 1px solid black!important;
+    border-radius: 8px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+fieldset.main-group .fieldset-title {
+    font-size: 18px;
+    color: black;
+    width: auto;
+}
+.fieldset-title {
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-right: 5px;
+    width: 80px;
+}
+fieldset .field-type-entityreference label{
+    display: none;
+}
+
+fieldset .field-type-entityreference .form-item .form-item label{
+    display: block;
+}
+legend{
+    border-bottom: 0px;
+}
+.field-type-field-collection{
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid black!important;
+    border-radius: 8px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+.field-type-field-collection tbody tr{
+    border: 1px solid black;
+    border-radius: 10px;
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+    float: left;
+}
+.field-type-field-collection tbody tr td{
+    display: inline-block;
+    float: left;
+    display: flex;
+}
+.tree {
+    min-height:20px;
+    margin: 0px;
+    padding: 0px;
+
+}
+.tree li {
+    list-style-type:none;
+    margin:0;
+
+    position:relative;
+    border:0px solid #999;
+
+    padding: 5px;
+}
+.tree li li li {
+    list-style-type:none;
+    margin:0;
+
+    position:relative;
+    border:1px solid #999;
+
+    padding: 5px;
+}
+.tree li::before, .tree li::after {
+    content:'';
+    left:-20px;
+    position:absolute;
+    right:auto
+}
+.tree li::before {
+
+    bottom:50px;
+    height:100%;
+    top:0;
+    width:1px
+}
+.tree li::after {
+
+    height:20px;
+    top:25px;
+    width:25px
+}
+.tree li span {
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+
+    display:inline-block;
+    padding:3px 8px;
+    text-decoration:none
+}
+.tree li.parent_li>span {
+    cursor:pointer
+}
+.tree>ul>li::before, .tree>ul>li::after {
+    border:0
+}
+.tree li:last-child::before {
+    height:30px
+}
+
+.tree ul{
+    border:1px solid #999;
+    border-radius:5px;
+    padding: 5px;
+}
+
+.tree  ul{
+    border:1px solid #999;
+    border-radius:0px;
+    padding: 5px;
+}
