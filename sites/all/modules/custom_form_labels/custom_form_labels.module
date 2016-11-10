@@ -1,0 +1,20 @@
+<?php
+
+function custom_form_labels_form_alter(&$form, &$form_state, $form_id)
+{
+
+
+if($form_id == 'curriculum_node_form'){
+
+    $form['field_theme']['und']['actions']['ief_add']['#value'] = t('Add new Theme');
+    $form['field_theme']['und']['actions']['ief_add_existing']['#value'] = t('Add existing Theme');
+
+    $form['field_theme']['und']['form']['actions']['ief_add_save']['#value'] = t('Save new Theme');
+
+    $form['field_theme']['und']['form']['field_lession']['und']['actions']['ief_add']['#value'] = t('Add new Lesson');
+    $form['field_theme']['und']['form']['field_lession']['und']['actions']['ief_add_existing']['#value'] = t('Add existing Lesson');
+
+    $form['field_theme']['und']['form']['field_lession']['und']['form']['actions']['ief_add_save']['#value'] = t('Save new Lesson');
+
+}
+}

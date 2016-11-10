@@ -1,0 +1,13 @@
+name = Custom form labels
+description = Set specific form labels
+package = Forms (custom)
+core = 7.x
+
+dependencies[] = entityreference
+
+; Information added by Drupal.org packaging script on 2015-08-24
+version = "7.x-1.6"
+core = "7.x"
+project = "custom_form_labels"
+datestamp = "1440400142"
+

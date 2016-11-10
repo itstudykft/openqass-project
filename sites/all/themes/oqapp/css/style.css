@@ -1,3 +1,10 @@
+i.fa{
+    color: black;
+    font-size: 16px;
+}
+i.fa.fa-times{
+    color: red;
+}
 #page-wrapper{
     max-width: 1100px;
     width: 100%;
@@ -212,32 +219,72 @@ legend{
     width: 100%;
     float: left;
 }
-.field-type-field-collection tbody tr td{
-    display: inline-block;
+
+.field-type-field-collection tbody tr tr{
+    border: 0px solid black;
+    border-radius: 10px;
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
     float: left;
+}
+.field-type-field-collection tbody tr td .ajax-new-content,
+.field-type-field-collection tbody tr td{
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+.field-type-field-collection tbody tr td .form-submit{
+    margin-top: 1.7em;
+    margin-left: 5px;
+}
+.field-type-field-collection tbody tr td input{
+    margin-left: 5px;
+}
+.field-name-field-name-subpart{
+    width: 390px;
+}
+.field-name-field-name-subpart input{
+    width: 95%;
 }
 .tree {
     min-height:20px;
     margin: 0px;
     padding: 0px;
-
+    float: left;
+    width: 100%;
 }
 .tree li {
     list-style-type:none;
     margin:0;
-
+    background-color: rgba(100,100,100,0.3);
     position:relative;
     border:0px solid #999;
-
+    border-radius: 5px;
     padding: 5px;
+    margin-bottom: 5px;
 }
 .tree li li li {
     list-style-type:none;
     margin:0;
-
+    margin-bottom: 5px;
     position:relative;
-    border:1px solid #999;
+
 
     padding: 5px;
 }
@@ -279,13 +326,152 @@ legend{
 }
 
 .tree ul{
-    border:1px solid #999;
+
     border-radius:5px;
     padding: 5px;
 }
 
 .tree  ul{
-    border:1px solid #999;
+
     border-radius:0px;
     padding: 5px;
+}
+#block-system-main,
+.block-facetapi,
+ul.facetapi-facetapi-links{
+    width: 100%;
+    float: left;
+}
+ul.facetapi-facetapi-links li{
+    float: left;
+    list-style: none;
+}
+
+ul.facetapi-facetapi-links li.facetapi-inactive{
+    border: 1px solid black;
+    border-radius: 5px;
+    display: block;
+    margin-bottom: 10px;
+    padding: 0px 5px;
+    float: left;
+}
+ul.facetapi-facetapi-links li.facetapi-active{
+
+    border-radius: 5px;
+    display: block;
+    margin-bottom: 10px;
+    padding: 0px 5px;
+    float: left;
+
+    background-color: rgba(22, 155, 213, 1);
+    color: #fff;
+    border: 1px solid rgba(22, 155, 213, 1);
+}
+tr .field-type-field-collection {
+    width: 100%;
+    background-color: transparent;
+    border: 0px solid black!important;
+    border-radius: 8px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+tr .field-type-field-collection tbody tr {
+    border: 0px solid black;
+    border-radius: 10px;
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+    float: left;
+}
+.field-widget-field-collection-embed{
+    width: 100%;
+    background-color: transparent;
+    border: 0px solid black!important;
+    border-radius: 8px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+tr .field-name-field-part{
+    margin-left: 20px;
+    margin-top: 20px;
+    border: 1px solid black!important;
+    width:100%;
+}
+a.tabledrag-handle .handle {
+
+    height: 40px;
+    margin: -0.4em 0.5em;
+    padding: 0.42em 0.5em;
+    width: 40px;
+}
+form .field-multiple-table td.field-multiple-drag{
+    float: left;
+}
+
+.well {
+    background-image: none;
+
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffe8e8e8', endColorstr='#fff5f5f5', GradientType=0);
+    border-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.block-facetapi h2{
+    float: left;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.block-facetapi ul{
+    margin: 0px;
+}
+.block-facetapi .content{
+    float: left;
+    margin-top: 8px;
+}
+.block-facetapi{
+    background-color: rgba(201, 201, 201, 1);
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.cimke{
+    padding: 5px 10px;
+    width: 120px;
+    margin-right: 10px;
+    float: left;
+    text-align: center;
+    border-radius: 5px;
+    background-color: rgba(100,100,100,0.3);
+}
+.view-header{
+    width: 100%;
+    float: left;
+    padding: 3px 19px;
+}
+.entityreference-dragdrop-container-available{
+    position: absolute;
+    right: -275px;
+    width: 275px;
+}
+input[name='search']{
+    width: 260px;
+}
+
+.add_new{
+    font-size: 18px;
+    color: white;
+    border-radius: 5px;
+    background-color: rgba(39, 163, 200, 1);
+    padding: 5px 10px;
+    margin-left: -20px;
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+}
+.add_new:hover{
+    color: #383838;
+    text-decoration: none;
+    background-color: rgb(46, 211, 255);
 }

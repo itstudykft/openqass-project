@@ -110,11 +110,7 @@
         </div></div> <!-- /.section, /#messages -->
     <?php endif; ?>
 
-    <?php if ($tabs): ?>
-        <div class="tabs">
-            <?php print render($tabs); ?>
-        </div>
-    <?php endif; ?>
+
 
     <?php if ($action_links): ?>
         <ul class="action-links">
@@ -124,6 +120,13 @@
 
     <?php if ($page['content']): ?>
       <div id="content" class="clearfix col-md-9">
+          <?php if ($tabs): ?>
+              <div class="tabs">
+                  <?php print render($tabs); ?>
+              </div>
+          <?php endif; ?>
+
+
         <?php print render($page['content']); ?>
       </div>
     <?php endif; ?>
