@@ -1,12 +1,3 @@
-Search API 1.x, dev (xxxx-xx-xx):
----------------------------------
-- #2649412 by relaxnow, GoZ: Added support for minimum granularity to date
-  facets.
-- #2769021 by Plazik, drunken monkey: Added the generated Search API query to
-  the Views preview.
-- #2769877 by mfernea: Fixed database exception when filtering for anonymous
-  user.
-
 Search API 1.20 (2016-07-21):
 -----------------------------
 - #2731103 by drunken monkey: Fixed the default value for the taxonomy term

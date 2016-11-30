@@ -1,5 +1,10 @@
 
 jQuery(document).ready(function($) {
+
+
+
+
+
     $('body .form-type-checkbox').on('click','label',function(){
         var cica = $(this).prev().attr('class');
 
@@ -11,7 +16,7 @@ jQuery(document).ready(function($) {
             $(this).parent().appendTo(form);
         }
         else{
-           // alert(cica);
+            // alert(cica);
             $Input = $(this).prev();
             var szuro = $(this).parents('fieldset.field-group-fieldset').find('.szurok');
             // var elem = $(szuro).find('input').removeClass('pipalva').parent();
@@ -45,49 +50,198 @@ jQuery(document).ready(function($) {
 
             $(document).ready(function() {
 
-                    $('.tree li:has(ul)').addClass('parent_li').find(' > span').attr('title', 'Expand this branch');
-                    var parent = $('.tree li.parent_li > span');
+
+
+
+                    $('ul').each(function(){
+                        if($(this).find('li').length < 1){
+                            $(this).hide();
+                        }
+
+                    })
+
+
+
+                    $('.tree li:has(ul)').addClass('parent_li').find('.harmas').attr('title', 'Expand this branch');
+
+                    var parent = $('.tree li.parent_li .harmas');
                     var children = $(parent).parent('li.parent_li').find(' > ul > li');
-                    children.hide('fast');
-                    $('.tree li.parent_li > span').on('click', function (e) {
+                    children.parent().hide('fast');
+                    $('.tree li.parent_li .harmas').on('click', function (e) {
                         var children = $(this).parent('li.parent_li').find(' > ul > li');
                         if (children.is(":visible")) {
-                            children.hide('fast');
+                            children.parent().hide('fast');
                             $(this).attr('title', 'Expand this branch').find(' > i').addClass('icon-plus-sign').removeClass('icon-minus-sign');
                         } else {
-                            children.show('fast');
+                            children.parent().show('fast');
                             $(this).attr('title', 'Collapse this branch').find(' > i').addClass('icon-minus-sign').removeClass('icon-plus-sign');
                         }
                         e.stopPropagation();
                     });
 
 
+                    $('.tree li').find('.cimke').parent().attr('title', 'Expand this branch');
+                    var parent = $('.tree li.parent_li .cimke').parent();
+                    var children = $(parent).parent('li.parent_li').find(' > ul > li');
+                    children.parent().hide('fast');
+                    $('.tree li.parent_li .cimke').parent().on('click', function (e) {
+                        var children = $(this).parent('li.parent_li').find(' > ul > li');
+                        if (children.is(":visible")) {
+                            children.parent().hide('fast');
+                            $(this).attr('title', 'Expand this branch').find(' > i').addClass('icon-plus-sign').removeClass('icon-minus-sign');
+                        } else {
+                            children.parent().show('fast');
+                            $(this).attr('title', 'Collapse this branch').find(' > i').addClass('icon-minus-sign').removeClass('icon-plus-sign');
+                        }
+                        e.stopPropagation();
+                    });
+
+
+                    $('.entityreference-dragdrop-container-available').hide();
+                    $('.entityreference-dragdrop-container-selected').on('click',function(){
+
+                        $('.entityreference-dragdrop-container-selected').removeClass('selected');
+                        $(this).addClass('selected');
+                        if($(this).parent().find('.entityreference-dragdrop-container-available').hasClass('selected')){
+
+                        }else{
+                            $('.entityreference-dragdrop-container-available').slideUp(400).removeClass('selected');
+                        }
 
 
 
-                    $('.entityreference-dragdrop-container-available').prepend('<div>Search: <br><input type="text" name="search"/></div>'); //add input box
+                        if($(this).parent().find('.entityreference-dragdrop-container-available').hasClass('selected')){
+
+                        }else{
+                            $('.entityreference-dragdrop-container-available').removeClass('selected');
+                            $(this).parent().find('.entityreference-dragdrop-container-available').addClass('selected').slideDown(400);
+
+                        }
+
+
+
+                    })
+                    $('.entityreference-dragdrop-container-available').each(function(){
+                        if ($(this).find('input').hasClass('new-search')){
+
+                            //add input box
+                        }else{
+
+                            $(this).prepend('<div>Search: <br><input type="text" class="new-search" name="search"/></div>');
+                        }
+                    })
+
+                    $('.entityreference-dragdrop-container-available')
+
                     $('.entityreference-dragdrop-container-available').on('keyup','input',function(e){
 
-                        var text = $('.entityreference-dragdrop-container-available input').val().toLowerCase();;
+                        var text = $(this,'input').val().toLowerCase();
                         text = new RegExp(text);
-                        $('.entityreference-dragdrop-container-available ul').find('li').css('color','black').hide(0);
-                        $('.entityreference-dragdrop-container-available ul').find('li').each(function(){
+
+                        $(this).parent().parent().find('li').css('color','black').hide(0);
+                        $(this).parent().parent().find('li').each(function(){
 
                             $(this).filter(function () {
                                 var filtered = $(this).text().toLowerCase();
 
                                 var res = text.test(filtered);
                                 $Cica = $(this);
-                                if(res == true){
+                                if(res == true && $Cica.hasClass('szurt')){
                                     $Cica.show();
                                 }
                             })
                         })
                     });
+// Dropdown filter select list
+                    $(".entityreference-dragdrop-container-available li").addClass('szurt');
+                    $(".entityreference-dragdrop-container-available").on("change","#filter_select",function(e) {
+                        $(this).parent().find('li').hide().removeClass('szurt');
+                        var szuro = $(this).val();
+
+                        $(this).parent().find("span.field-content").each(function(){
+                            if ($(this).hasClass(szuro)){
+                                $(this).parents("li").show().addClass('szurt');
+                            }
+                        })
+                    })
+
+
+
+
+
+                    $('.entityreference-dragdrop-container-available').each(function(){
+                        if($(this).hasClass("vegzett")){
+                            console.log("nope");
+                        }
+                        else{
+                            var classList = [];
+                            var classes = [];
+                            if ($(this).parents('ul').hasClass('hozzaadva')){
+                                console.log('Nem kell select');
+                            }else{
+                                $(this).prepend('<select id="filter_select"></select>');
+                                $(this).find('ul').addClass('hozzaadva');
+                                $(this).find('span.field-content').each(function(){
+                                    var clas = $(this).attr('class').split("KLAS");
+                                    if(clas.length > 1){
+
+                                        $(this).removeClass();
+                                        for (var i = 0; i < clas.length; i++) {
+                                            var valami = clas[i];
+
+                                            valami = valami.split(' ');
+
+                                            for (var z = 0; z < valami.length; z++) {
+
+                                                $(this).addClass(valami[z]);
+                                                classes.push(valami[z]);
+                                            }
+                                        }
+                                    }else{
+                                        var clas = $(this).attr('class');
+                                        var valami = clas;
+
+                                        valami = clas.split(' ');
+
+                                        for (var z = 0; z < valami.length; z++) {
+                                            classes.push(valami[z]);
+                                        }
+                                    }
+                                });
+                                classList = unique(classes);
+                                console.log(classes);
+                                function unique(list) {
+                                    var result = [];
+                                    $.each(list, function(i, e) {
+                                        if ($.inArray(e, result) == -1) result.push(e);
+                                    });
+                                    return result;
+                                }
+                                var option = '';
+                                for (var i=0;i<classList.length;i++){
+                                    var name = classList[i].replace(/-/g," ");
+                                    if (name == "field content"){
+                                        name = "- All -";
+                                    }
+                                    option += '<option value="'+ classList[i] + '">' + name + '</option>';
+                                }
+                                $(this).find('#filter_select').append(option);
+                            }
+                            $(this).addClass('vegzett');
+
+                        }
+                        $(this).find('select').chosen();
+                    })
+
 
 
                     $('fieldset.field-group-fieldset.collapsible').each(function(){
-                        $(this).find('.fieldset-legend').append('<div class="szurok"></div>');
+                        if($(this).find('div').hasClass('szurok')){
+
+                        }else{
+                            $(this).find('.fieldset-legend').append('<div class="szurok"></div>');
+                        }
+
                         var szuro = $(this).find('.szurok');
 
                         var elem = $(this).find('.form-checkboxes input[type="checkbox"]');

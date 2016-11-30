@@ -100,8 +100,8 @@
       <?php endif; ?>
 
     </div>
-    <?php if ($breadcrumb): ?>
-      <div id="breadcrumb"><?php print $breadcrumb; ?></div>
+   <?php if ($breadcrumb): ?>
+
     <?php endif; ?>
 
     <?php if ($messages): ?>
