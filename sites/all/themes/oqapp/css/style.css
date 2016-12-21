@@ -1,5 +1,5 @@
 
-i.fa.fa-times{
+a i.fa.fa-times{
     color: red;
 }
 #page-wrapper{
@@ -13,6 +13,9 @@ i.fa.fa-times{
     width: 100%;
     color: white;
 }
+#block-system-main > .content > .node{
+    margin-top: 55px;
+}
 #header-row ul{
     margin: 0px;
 
@@ -22,7 +25,7 @@ i.fa.fa-times{
 }
 #header ul{
     margin: 0px;
-    margin-top: 22px;
+    margin-top: 25px;
 }
 #header-right{
     background-color: rgba(0, 153, 255, 1);
@@ -83,6 +86,12 @@ i.fa.fa-times{
     margin-top: 10px;
     padding-right: 0px;
     padding-left: 0px;
+    float: right;
+}
+#block-block-3{
+    margin-top: 15px;
+    float:left;
+    width: 100%;
 }
 #right-sidebar .block{
     padding: 10px;
@@ -95,7 +104,7 @@ i.fa.fa-times{
     padding: 5px 15px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    background-color: rgb(172, 172, 172);
+    background-color: rgba(174, 174, 174, 1);
     margin-left: -10px;
     margin-right: -10px;
 }
@@ -191,6 +200,7 @@ fieldset.field-group-fieldset{
     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
     box-sizing: border-box;
+
 }
 fieldset.main-group{
     background-color: transparent;
@@ -210,7 +220,15 @@ fieldset.main-group .fieldset-title {
     font-weight: bold;
     margin-top: 5px;
     margin-right: 5px;
-    width: 80px;
+    width: 120px;
+}
+.field-group-format-wrapper .field-group-format-wrapper h3{
+    float: left;
+    width: 100%;
+
+}
+.field-group-format-wrapper h3 span{
+    float: left;
 }
 fieldset .field-type-entityreference label{
     display: none;
@@ -219,8 +237,94 @@ fieldset .field-type-entityreference label{
 fieldset .field-type-entityreference .form-item .form-item label{
     display: block;
 }
+.vertical-tabs-panes .field-type-entityreference {
+    float: left;
+    width: auto;
+}
+.vertical-tabs-panes .field-type-entityreference .field-items{
+    isplay: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: space-around;
+    -ms-flex-line-pack: space-around;
+    align-content: space-around;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border: 1px solid black;
+    height: calc(100% - 21px);
+}
+.vertical-tabs-panes{
+
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: space-between;
+    -ms-flex-line-pack: justify;
+    align-content: space-between;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+}
+.vertical-tabs-panes .field-type-entityreference .field-label {
+
+    margin: 0px;
+    min-width: 100px;
+    padding-right: 5px;
+    padding-left: 5px;
+    border-bottom: 1px solid black;
+}
+.field-multiple-drag .node{
+    float: left;
+    width: 100%;
+}
+fieldset fieldset{
+    background-color: rgba(218,218,218,1);
+    min-height: 55px;
+    border-radius: 5px;
+}
+#curriculum-node-form > div > fieldset > legend > span > a
+{
+    margin-bottom: 10px;
+}
+#curriculum-node-form > div > fieldset{
+    border: 2px solid rgba(218,218,218,1)!important;
+    border-radius: 5px;
+    padding: 10px;
+    background:transparent;
+}
+#curriculum-node-form > div > fieldset > legend{
+    background: transparent;
+    display: none;
+}
 legend{
     border-bottom: 0px;
+    position: relative;
+
+    float: left;
+    width: 100%;
+}
+.field-type-entityreference{
+    float: left;
+    width: 100%;
 }
 .field-type-field-collection{
     width: 100%;
@@ -238,7 +342,84 @@ legend{
     width: 100%;
     float: left;
 }
+div.collapsible{
+    float: left;
+    width: 100%;
+}
+.ui-dialog{
+    width: 100%!important;
+    height: 100%!important;
+    top: 0!important;
+    left: 0!important;
+}
+.ui-dialog iframe{
+    height: 100% !important;
+}
+#curriculum-node-form > div > div.collapsible.required-fields.speed-fast.effect-none.fieldgroup-effects-processed{
+    padding: 10px;
+    border: 2px solid rgba(218,218,218,1)!important;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+}
+.field-group-format-wrapper{
+    float: left;
+    width: 100%;
 
+}
+.required-fields .collapsible h3 span a:before {
+    content:"\f0d7";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    margin-right: 10px;
+    margin-left: -10px;
+    font-size: 30px;
+    margin-top: -8px;
+    float: left;
+    height: 10px;
+}
+.required-fields .collapsed h3 span a:before {
+    content: "\f0da";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    margin-right: 10px;
+    margin-left: -10px;
+    font-size: 30px;
+    margin-top: -8px;
+    float: left;
+    height: 10px;
+
+}
+.field-group-format-wrapper .collapsible{
+    padding: 5px 10px;
+    background-color: rgba(218,218,218,1);
+    margin-top: 10px;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+}
+.field-group-format-wrapper .collapsible .form-type-checkboxes > label{
+    display: none;
+}
+.field-group-format-wrapper h3 a,
+.field-group-format-wrapper h3{
+    float: left;
+    width: 100%;
+    font-size: 14px;
+    color: black;
+    text-decoration: none;
+    margin: 0px;
+    padding: 5px 10px;
+}
+.collapsible h3{
+    font-size: 16px;
+    margin: 0px;
+    padding: 0px;
+}
 .field-type-field-collection tbody tr tr{
     border: 0px solid black;
     border-radius: 10px;
@@ -335,15 +516,50 @@ legend{
     text-decoration:none
 }
 .tree li.parent_li>span {
-    cursor:pointer
+    cursor:pointer;
 }
 .tree>ul>li::before, .tree>ul>li::after {
-    border:0
+    border:0;
 }
-.tree li:last-child::before {
-    height:30px
+.tree li:last-child i.icon-folder-open::before {
+    height:30px;
+    content: "\f0da";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    margin-right: 10px;
+    margin-left: -10px;
+    font-size: 30px;
+    margin-top: -8px;
+    float: left;
+    height: 10px;
+    margin-left: 0px;
+    color: black;
 }
-
+#block-system-main > div > div.view-header{
+    margin-left: 20px;
+}
+#block-system-main > div > div > ul > li > div{
+    width: 106px;
+}
+.tree li:last-child i.icon-folder-open.icon-minus-sign::before {
+    height:30px;
+    content: "\f0d7";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    margin-right: 10px;
+    margin-left: -10px;
+    font-size: 30px;
+    margin-top: -8px;
+    float: left;
+    height: 10px;
+    margin-left: -5px;
+    margin-right: 8px;
+    color: black;
+}
 .tree ul{
 
     border-radius:5px;
@@ -450,19 +666,26 @@ form .field-multiple-table td.field-multiple-drag{
     margin-top: 8px;
 }
 .block-facetapi{
-    background-color: rgba(201, 201, 201, 1);
+    background-color: rgba(228, 228, 228, 1);
     border-radius: 5px;
-    margin-bottom: 10px;
+    margin-top: 10px;
 }
 .cimke{
-    padding: 5px 10px;
+    padding: 2px 3px;
     width: 116px;
     margin-right: 10px;
     float: left;
     text-align: center;
     border-radius: 5px;
     background-color: rgba(100,100,100,0.3);
+
 }
+#block-system-main > div > div.tree.well > ul > li > span .cimke{
+    color: rgb(1, 107, 200);
+}
+.harmas span{
+     color: rgb(1, 107, 200);
+ }
 .view-header{
     width: 100%;
     float: left;
@@ -502,11 +725,11 @@ form .field-multiple-table td.field-multiple-drag{
 .entityreference-dragdrop-label2{
 
     margin: 0px;
-    margin-top: 20px;
+    margin-top: 0px;
     padding: 5px 15px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    background-color: rgb(172, 172, 172);
+    background-color: rgba(174, 174, 174, 1);
     margin-left: 0px;
 
 
@@ -539,12 +762,12 @@ input[name='search']{
 }
 
 .add_new{
-    font-size: 18px;
+    font-size: 12px;
     color: white;
     border-radius: 5px;
     background-color: rgba(39, 163, 200, 1);
     padding: 5px 10px;
-    margin-left: -20px;
+    margin-left: 0px;
     text-decoration: none;
     margin-bottom: 10px;
 }
@@ -558,17 +781,18 @@ a{
     background-color: rgb(46, 211, 255);
 }
 .reset_button{
-    font-size: 18px;
+    font-size: 12px;
     color: white;
     border-radius: 5px;
     background-color: rgba(39, 163, 200, 1);
     padding: 5px 10px;
-    margin-right: 15px;
+    margin-right: 0px;
     text-decoration: none;
     margin-bottom: 10px;
     position: absolute;
     right: 0px;
-    margin-top: -6px;
+    margin-top: 0px;
+    height: 25px;
 }
 #footer{
     float: left;
@@ -582,7 +806,7 @@ a{
 }
 .control-icons{
     float: right;
-    margin-top: 8px;
+    margin-top: 5px;
     margin-right: 0px;
     width: 116px;
     text-align: center;
@@ -751,7 +975,7 @@ ul.entityreference-dragdrop li{
     font-size: 14px;
 }
 .ui-dialog .ui-dialog-titlebar-close{
-    background-image: url(/sites/all/themes/adminimal_theme/css/images/x-white.png);
+    background-image: url('/sites/all/themes/adminimal_theme/css/images/x-white.png');
 }
 table.forum-table{
     width: 100%;
@@ -807,4 +1031,474 @@ i{
 .parent_li{
     float: left;
     width: 100%;
+}
+.library-element .file a{
+    display: none;
+}
+.hide{
+    display: none!important;
+}
+.library-element{
+    padding: 0px;
+    width: 100%;
+    background-color: rgba(215, 215, 215, 1);
+    border-radius: 5px;
+    margin-bottom: 15px;
+    float:left;
+    position: relative;
+}
+.library-element .title{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width: 100%;
+    background-color: rgba(174, 174, 174, 1);
+    padding: 10px;
+    padding-left: 10px;
+    font-size: 18px;
+    float: left;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.library-element .created{
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+.library-element .author{
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.library-body{
+    padding: 10px;
+    float: left;
+    width: 80%;
+    min-height: 130px;
+    border-right: 2px solid white;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+.file-types{
+    padding: 10px;
+    width: 100%;
+    text-align: right;
+    float: left;
+    border-top: 2px solid white;
+}
+.file-types img{
+    height: 20px;
+}
+.library-element .right-element{
+    float: left;
+    width: 20%;
+    position: absolute;
+    height: 100%;
+    right: 0px;
+    top: 30px;
+}
+.library-element .text{
+    float: left;
+    width: 100%;
+    position: relative;
+    margin-bottom: 10px;
+}
+.library-body p{
+    margin: 0px;
+}
+.library-element .tags{
+    float: left;
+    width: 100%;
+    margin-top: auto;
+
+}
+.library-element .right-element .control-icons{
+    width: 100%;
+    position: absolute;
+    bottom: 110px;
+}
+#filters{
+    padding: 10px;
+    margin: 10px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgba(201, 201, 201, 1);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    width: calc(75% - 20px);
+}
+.content:has(> .views-row){
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgba(201, 201, 201, 1);
+    border-radius: 5px;
+    padding: 10px;
+
+}
+#superfish-2 li#menu-2-2 a:before, #block-system-user-menu li.first a:before {
+    font-size: 21px;
+    color: #333333;
+    content: "\f007";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    position: relative;
+    z-index: inherit;
+    padding-right: 10px;
+    top: 3px;
+
+}
+#superfish-2 li#menu-15-2 a:before, #block-system-user-menu li.last a:before {
+    font-size: 21px;
+    color: #333333;
+    content: "\f08b";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    position: relative;
+    z-index: inherit;
+    padding-right: 10px;
+    top: 3px;
+
+}
+#superfish-2 li#menu-15-2, #block-system-user-menu li.last {
+    float: right;
+    margin-right: 10px;
+    padding-right: 0px;
+}
+#header li.active-trail {
+    background-color: rgba(242, 242, 242, 1);
+    -moz-border-radius-topleft: 5px;
+    border-top-left-radius: 5px;
+    -moz-border-radius-topright: 5px;
+    border-top-right-radius: 5px;
+}
+input {
+    -background-color: rgba(242, 242, 242, 1);
+
+    border-radius: 5px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    padding: 2px 5px;
+
+    font-weight: 700;
+    font-style: normal;
+    font-size: 14px;
+    border: 1px solid rgba(201, 201, 201, 1);
+
+
+}
+
+
+.field-name-field-create-new-library-element {
+    float: left;
+    width: calc(100% + 290px);
+    margin-right: 0px;
+    padding-right: 10px;
+
+}
+
+.entityreference-dragdrop-container-available{
+
+}
+.entityreference-dragdrop-container-available.selected{
+    display: block!important;
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+}
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(startYposition);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(endYposition);
+    }
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(startYposition);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(endYposition);
+    }
+}
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 1;
+        -webkit-transform: translateY(startYposition);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(endYposition);
+    }
+}
+*{
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+.region-sidebar-first{
+    margin-top: 50px;
+}
+#block-system-main > .content > .node.node-promoted{
+    margin-top: 40px;
+}
+#filters{
+    margin-top: 55px;
+}
+.forum-node-create-links{
+    margin-bottom: 10px;
+}
+.page-node-add .form-wrapper{
+
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    FLOAT:left;
+    width: 100%;
+    margin-top: 10px;
+}
+.page-node-add .form-wrapper.field-name-field-theme-link{
+    padding: 10px;
+    border: 2px solid rgba(218,218,218,1)!important;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    FLOAT:left;
+    width: 100%;
+    margin-top: 10px;
+}
+tr.even, tr.odd {
+    background-color: transparent;
+    border-bottom: 0px solid #ccc;
+    padding: 0.1em 0.6em;
+}
+th,tbody {
+    border: 0px!important;
+}
+.field-multiple-table td .form-item,
+.field-multiple-table td .dialog-links{
+    float: left;
+}
+.references-dialog-links{
+    float: left;
+    margin: 0px;
+    padding: 0px;
+}
+ul.references-dialog-links li a{
+    font-size: 0px;
+    float: left;
+    background: none!important;
+    margin: 0px;
+    padding: 0px;
+    margin-left: 15px;
+}
+.references-dialog-links a.add-dialog:before{
+    content: "\f067";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    font-size: 21px;
+    color: black;
+}
+.references-dialog-links a.edit-dialog:before{
+    content: "\f044";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    font-size: 21px;
+    color: black;
+}
+a:hover, a:focus {
+
+    text-decoration: none;
+}
+.field-type-file tr td .form-submit{
+    margin-top: 40px;
+}
+.field-type-file th{
+    padding: 10px;
+}
+.field-type-file tr td{
+    padding: 10px;
+}
+.field-type-file table{
+    width: 100%;
+}
+.field-type-file tr{
+
+    margin-top: 10px;
+    border: 2px solid white;
+}
+.form-type-managed-file .form-submit{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.field-type-entityreference .field-label{
+    margin-bottom: 3px;
+    margin-top: 3px;
+    min-width: 100px;
+    margin-right: 10px;
+}
+.content .field{
+    margin-bottom: 10px;
+}
+.field-type-entityreference .field-item{
+    display: inline-block;
+    padding: 2px 4px;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius: 5px;
+    background-color: rgba(22, 155, 213, 1);
+    margin-left: 5px;
+    color: white;
+    margin-bottom: 3px;
+    margin-top: 3px;
+}
+.field-name-field-part{
+    border: 0px;
+    float: left;
+    width: 100%;
+}
+.field-name-field-part .entity{
+    padding: 10px;
+    border: 2px solid rgba(218,218,218,1);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.field-type-field-collection > .field-items{
+    width: 100%;
+}
+.field-type-field-collection .field-items .field .field-label{
+    min-width: 100px;
+}
+.node > h2{
+    font-size: 21px;
+    color: black;
+    margin-left: -15px;
+    padding: 10px;
+
+}
+.tabledrag-toggle-weight-wrapper{
+    display: none;
+}
+.field-widget-download-link-widget{
+    display: none;
+}
+.library-body .item-list{
+    float: left;
+
+}
+.library-body .item-list li{
+    float: left;
+    list-style: none;
+    background-color: white;
+    border-radius: 4px;
+    border: 1px solid grey;
+    color: black;
+    text-decoration: none;
+
+    padding: 0px 5px;
+}
+.download-link{
+    float: left;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    position: absolute;
+    bottom: 70px;
+}
+.download-link a{
+    background-color: rgba(22, 155, 213, 1);
+    color: #fff;
+    border: 1px solid rgba(22, 155, 213, 1);
+    text-transform: capitalize;
+    font-weight: bold;
+
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+}
+.form-actions input{
+    margin-right: 10px;
+}
+.block-facetapi h2{
+    cursor: pointer;
+    margin-left: 20px;
+    font-size: 14px;
+}
+.block-facetapi .content{
+    display: none;
+}
+.block-facetapi h2:before {
+    content: "\f0da";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    margin-right: 10px;
+    margin-left: -10px;
+    font-size: 30px;
+    margin-top: -8px;
+    float: left;
+    height: 10px;
+}
+.block-facetapi h2.open:before {
+    content: "\f0d7";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    margin-right: 10px;
+    margin-left: -10px;
+    font-size: 30px;
+    margin-top: -8px;
+    float: left;
+    height: 10px;
+}
+.harmas > .control-icons > i{
+    margin-left: 5px;
+}
+#ief-entity-table-edit-field-insert-und-entities{
+    width: 100%;
+}
+#edit-field-insert-und > legend{
+    display: none;
+}
+.field-name-field-insert legend{
+    display: none;
+}
+tr.ief-row-entity td{
+    padding: 5px;
+}
+#edit-field-insert-und-actions{
+    margin-bottom: 10px;
+}
+#edit-field-insert-und-form-actions input{
+    margin: 5px;
+}
+.ief-form-bottom{
+    padding: 10px;
+    margin-bottom: 10px;
 }

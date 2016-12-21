@@ -9,6 +9,7 @@ core = 7.x
 regions[header] = Header
 regions[header_right] = Header Right
 regions[sidebar_first] = Right sidebar
+regions[filters] = Filters
 regions[content] = Content
 regions[footer] = Footer
 

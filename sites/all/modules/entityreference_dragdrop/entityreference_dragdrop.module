@@ -42,19 +42,19 @@ function entityreference_dragdrop_field_widget_form(&$form, &$form_state, $field
   $markup_available = entityreference_dragdrop_build_html($available, $field, $instance, $ec, array('entityreference-dragdrop-available'));
   $markup_selected = entityreference_dragdrop_build_html($selected, $field, $instance, $ec, array('entityreference-dragdrop-selected'));
 
-  $label = '<div class="entityreference-dragdrop-label">' . $instance['label'] . '</div>';
+  $label = '<div class="entityreference-dragdrop-label">' . t($instance['label']) . '</div>';
   $message = $field['cardinality'] == -1 ? '' : '<div class="entityreference-dragdrop-message" data-ec="' . $ec . '">' . t("This field cannot hold more than @card values.", array('@card' => $field['cardinality'])) . '</div>';
 
   $html_1 = '<div class="entityreference-dragdrop-container-available">';
   $html_1 .= '<div class="entityreference-dragdrop-list-header">';
-  $html_1 .=  $instance['widget']['settings']['available_entities_label'];
+  $html_1 .=  t($instance['widget']['settings']['available_entities_label']);
   $html_1 .= '</div>';
   $html_1 .= $markup_available;
   $html_1 .= '</div>';
 
   $html_2 = '<div class="entityreference-dragdrop-container-selected">';
   $html_2 .= '<div class="entityreference-dragdrop-list-header">';
-  $html_2 .= $instance['widget']['settings']['selected_entities_label'];
+  $html_2 .= t($instance['widget']['settings']['selected_entities_label']);
   $html_2 .= '</div>';
   $html_2 .= $markup_selected;
   $html_2 .= '</div>';

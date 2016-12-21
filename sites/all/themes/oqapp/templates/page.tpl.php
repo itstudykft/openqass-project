@@ -117,7 +117,16 @@
             <?php print render($action_links); ?>
         </ul>
     <?php endif; ?>
-
+        <?php if ($page['filters']): ?>
+            <div id="filters" class="clearfix col-md-9">
+                <?php print render($page['filters']); ?>
+            </div>
+        <?php endif; ?>
+        <?php if ($page['sidebar_first']): ?>
+            <div id="right-sidebar" class="clearfix col-md-3">
+                <?php print render($page['sidebar_first']); ?>
+            </div>
+        <?php endif; ?>
     <?php if ($page['content']): ?>
       <div id="content" class="clearfix col-md-9">
           <?php if ($tabs): ?>
@@ -131,11 +140,7 @@
       </div>
     <?php endif; ?>
 
-    <?php if ($page['sidebar_first']): ?>
-      <div id="right-sidebar" class="clearfix col-md-3">
-        <?php print render($page['sidebar_first']); ?>
-      </div>
-    <?php endif; ?>
+
 
     <?php if ($page['footer']): ?>
       <div id="footer" class="clearfix">
