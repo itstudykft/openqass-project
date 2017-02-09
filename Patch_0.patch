@@ -1,0 +1,30 @@
+445,448c445,448
+<     // Limit for all the referrable bundles.
+<     foreach ($referred_bundles as $bundle_name) {
+<       $query->entityCondition('bundle', $bundle_name);
+<     }
+---
+> 
+>     // Limit for all the referable bundles (all values in array $referred_bundles).
+>     $query->entityCondition('bundle', $referred_bundles);
+> 
+500c500
+<       $entities = entity_load($referred_entity_type, array_keys($result[$referred_entity_type]));
+---
+>       $option_entities = entity_load($referred_entity_type, array_keys($result[$referred_entity_type]));
+503c503
+<       $entities = array();
+---
+>       $option_entities = array();
+505c505
+<     //dsm($entities);
+---
+>     //dsm($option_entities);
+509,511c509,511
+<     foreach ($entities as $entity) {
+<        list($id, $vid, $bundle) = entity_extract_ids($referred_entity_type, $entity);
+<        $options_limited[$id] = entity_label($referred_entity_type, $entity);
+---
+>     foreach ($option_entities as $option_entity) {
+>        list($opt_id, $opt_vid, $opt_bundle) = entity_extract_ids($referred_entity_type, $option_entity);
+>        $options_limited[$opt_id] = entity_label($referred_entity_type, $option_entity);

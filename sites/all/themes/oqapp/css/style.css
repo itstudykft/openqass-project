@@ -1,4 +1,52 @@
+.webform-grid .radio, .webform-grid .checkbox {
+    display: table-cell;
+    text-align: center;
+    width: 142px;
+}
+.webform-grid .radio input[type="radio"],
+.webform-grid .radio-inline input[type="radio"],
+.webform-grid .checkbox input[type="checkbox"],
+.webform-grid .checkbox-inline input[type="checkbox"] {
+    float: none;
+    margin: 0 ;
+    display: block;
+}
+.webform-component-grid .form-item{
 
+}
+.webform-component-grid input{
+    display: block!important;
+        margin: 0 auto!important;
+
+
+
+}
+.region-content .block{
+    float: left;
+    width: 100%;
+}
+.field-type-datetime{
+    float: left;
+    width: 100%;
+}
+.webform-grid-question{
+    width: 50%;
+}
+
+tr.draggable td {
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-right:10px;
+}
+
+tr.draggable td:first-child {
+    padding-left:10px;
+    padding-right:0;
+}
+tr.draggable td div:nth-child(3){
+    float: left;
+    width: 100%;
+}
 a i.fa.fa-times{
     color: red;
 }
@@ -230,12 +278,16 @@ fieldset.main-group .fieldset-title {
 .field-group-format-wrapper h3 span{
     float: left;
 }
-fieldset .field-type-entityreference label{
-    display: none;
-}
+
 
 fieldset .field-type-entityreference .form-item .form-item label{
     display: block;
+}
+.field-name-field-theme-add .field-item{
+    width: 100%;
+}
+.field-name-field-theme-add .field-item .field.field-name-field-lesson-addd{
+    width: 100%;
 }
 .vertical-tabs-panes .field-type-entityreference {
     float: left;
@@ -684,8 +736,8 @@ form .field-multiple-table td.field-multiple-drag{
     color: rgb(1, 107, 200);
 }
 .harmas span{
-     color: rgb(1, 107, 200);
- }
+    color: rgb(1, 107, 200);
+}
 .view-header{
     width: 100%;
     float: left;
@@ -707,20 +759,10 @@ form .field-multiple-table td.field-multiple-drag{
     margin: 0px;
 }
 .entityreference-dragdrop-label{
-    position: absolute;
-    right: -275px;
-    width: 275px;
-    margin: 0px;
-    margin-top: -35px;
-    padding: 5px 15px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    background-color: rgb(172, 172, 172);
-    margin-left: -10px;
-
-
-    font-size: 18px;
-    z-index: 999;
+    float: left;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(174, 174, 174, 1);
 }
 .entityreference-dragdrop-label2{
 
@@ -892,9 +934,13 @@ td.field-content .field{
 table.field-group-format{
     width: 100%;
 }
-#edit-field-files-und-ajax-wrapper > fieldset > legend > span,
-#field-date-add-more-wrapper > fieldset > legend > span,
-.date-combo label{
+
+.date-combo span{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#edit-field-date-und-0-value > div > label{
     display: none;
 }
 div.entityreference-dragdrop-widget-wrapper > div.entityreference-dragdrop-container-selected.selected ul{
@@ -1070,6 +1116,10 @@ i{
     text-align: center;
     margin-top: 10px;
     margin-bottom: 5px;
+}
+.library-body a{
+    float: left;
+    margin-right: 10px;
 }
 .library-body{
     padding: 10px;
@@ -1295,6 +1345,7 @@ th,tbody {
 .field-multiple-table td .form-item,
 .field-multiple-table td .dialog-links{
     float: left;
+    width: 100%;
 }
 .references-dialog-links{
     float: left;
@@ -1448,10 +1499,13 @@ a:hover, a:focus {
     margin-left: 20px;
     font-size: 14px;
 }
-.block-facetapi .content{
+#right-sidebar .block-facetapi h2{
+    float: none;
+}
+#block-system-main .block-facetapi .content{
     display: none;
 }
-.block-facetapi h2:before {
+#block-system-main .block-facetapi h2:before {
     content: "\f0da";
     font-family: FontAwesome;
     font-style: normal;
@@ -1464,7 +1518,7 @@ a:hover, a:focus {
     float: left;
     height: 10px;
 }
-.block-facetapi h2.open:before {
+#block-system-main .block-facetapi h2.open:before {
     content: "\f0d7";
     font-family: FontAwesome;
     font-style: normal;
@@ -1476,6 +1530,9 @@ a:hover, a:focus {
     margin-top: -8px;
     float: left;
     height: 10px;
+}
+.entityreference-dragdrop-container-available .chosen-container{
+    display: none!important;
 }
 .harmas > .control-icons > i{
     margin-left: 5px;
@@ -1501,4 +1558,60 @@ tr.ief-row-entity td{
 .ief-form-bottom{
     padding: 10px;
     margin-bottom: 10px;
+}
+.field-name-field-theme-add .field-items .field-item{
+    background-color: transparent;
+    color: black;
+}
+.field-name-field-theme-add{
+    border: 1px solid black;
+    padding: 10px;
+}
+.field-multiple-drag .node{
+    float: left;
+    width: 100%;
+}
+.field-group-div{
+    float: left;
+    width: 100%;
+}
+.field-group-div.group-lesson,
+.group-temakor.field-group-div{
+    padding: 10px;
+    border: 2px solid grey;
+}
+#edit-field-az-ra-didaktikai-feladatai > div.entityreference-dragdrop-widget-wrapper > div.entityreference-dragdrop-container-selected,
+#edit-field-az-ra-didaktikai-feladatai > div.entityreference-dragdrop-label
+{
+    display: none;
+}
+#edit-field-az-ra-didaktikai-szoveges,
+#edit-field-az-ra-didaktikai-feladatai{
+    width: 50%;
+    float: left;
+}
+#edit-field-az-ra-didaktikai-feladatai > div.entityreference-dragdrop-widget-wrapper > div.entityreference-dragdrop-container-available.vegzett{
+    width: calc(100% - 15px);
+}
+#edit-field-az-ra-didaktikai-szoveges-und-0-value{
+    height: 272px;
+}
+.views-table{
+    width: 100%;
+}
+thead tr th{
+    text-align: center;
+}
+tbody tr{
+ padding: 5px;
+}
+tbody tr.odd{
+ background-color: rgba(228, 228, 228, 1);
+}
+tbody tr.even{
+
+}
+#block-views-strategic-plans-block tbody td,
+#block-views-processes-block tbody td{
+    text-align: center;
 }

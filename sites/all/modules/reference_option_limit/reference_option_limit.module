@@ -416,10 +416,12 @@ function reference_option_limit_field_attach_form($entity_type, $entity, &$form,
 
         // @todo: Figure out what on earth should happen when we have more than one column!
         $column = $match_columns[$field_name_matching][0];
-
-        foreach ($values_field_matching as $delta => $item) {
-          $match_values[$field_name_matching][$delta] = $item[$column];
+        if($values_field_matching != NULL){
+            foreach ($values_field_matching as $delta => $item) {
+                $match_values[$field_name_matching][$delta] = $item[$column];
+            }
         }
+
       }
       else {
         // This is an initial build of the form for a new entity.
@@ -506,17 +508,21 @@ function reference_option_limit_field_attach_form($entity_type, $entity, &$form,
 
     // Build an array of options.
     $options_limited = array();
-    foreach ($entities as $entity) {
-       list($id, $vid, $bundle) = entity_extract_ids($referred_entity_type, $entity);
-       $options_limited[$id] = entity_label($referred_entity_type, $entity);
-    }
+      foreach ($entities as $entity2) {
+          list($id, $vid, $bundle) = entity_extract_ids($referred_entity_type, $entity2);
+          $options_limited[$id] = entity_label($referred_entity_type, $entity2);
+      }
     $options_limited_empty = (count($options_limited) == 0);
 
     // Do the same prep work as options_field_widget_form() on our instance
     // to get a properties array to pass to _options_prepare_options().
     $type = str_replace('options_', '', $field_instance_option_limited['widget']['type']);
     $multiple = $field_option_limited['cardinality'] > 1 || $field_option_limited['cardinality'] == FIELD_CARDINALITY_UNLIMITED;
-    $required = $element_limited[LANGUAGE_NONE]['#required'];
+      if(isset($element_limited[LANGUAGE_NONE]['#required'])){
+          $required = $element_limited[LANGUAGE_NONE]['#required'];
+      }else{
+          $required = TRUE;
+      }
     $has_value = TRUE; // isset($items[0][$value_key]); ?????
     $properties = _options_properties($type, $multiple, $required, $has_value);
 

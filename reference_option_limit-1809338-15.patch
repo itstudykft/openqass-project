@@ -1,0 +1,59 @@
+diff --git a/reference_option_limit.module b/reference_option_limit.module
+index d54aa0a..cd448bc 100644
+--- a/reference_option_limit.module
++++ b/reference_option_limit.module
+@@ -284,6 +284,8 @@ function reference_option_limit_form_alter(&$form, &$form_state, $form_id) {
+             $field['fields_match']
+           )) {
+         $match = TRUE;
++        // Identify all fields affected by the triggering element.
++        $triggering_chain = reference_option_limit_triggering_chain($form_state['triggering_element']['#field_name'], $form_state['reference_option_limit']);
+         break;
+       }
+     }
+@@ -482,6 +484,13 @@ function reference_option_limit_form_alter(&$form, &$form_state, $form_id) {
+         '@fields' => implode(', ', $matching_field_labels),
+       ));
+     }
++    // If this field is affected by the triggering element,
++    // set a value in form_state.
++    if (!empty($triggering_chain[$field_name_option_limited])) {
++      reset($options_limited);
++      $form_state['input'][$field_name_option_limited][LANGUAGE_NONE] = key($options_limited);
++      $form_state['values'][$field_name_option_limited][LANGUAGE_NONE][0]['tid'] = key($options_limited);
++    }
+ 
+     // Set the new options into the form element.
+     $form[$field_name_option_limited][LANGUAGE_NONE]['#options'] = $options_limited;
+@@ -534,14 +543,26 @@ function reference_option_limit_js($form, $form_state) {
+     $return['#commands'][] = ajax_command_replace($selector, $html);
+   }
+   // Next add the rendered fields.
+-  foreach ($form_state['reference_option_limit'] as $settings) {
++  $triggering_chain = reference_option_limit_triggering_chain($field_name_triggering, $form_state['reference_option_limit']);
++  foreach ($triggering_chain as $settings) {
++    $selector = '#' . $settings['ajax_wrapper'];
++    $html = render($form[$settings['field']]);
++    $return['#commands'][] = ajax_command_replace($selector, $html);
++  }
++  return $return;
++}
++
++/**
++ * Get all fields affected by the triggering element.
++ */
++function reference_option_limit_triggering_chain($field_name_triggering, &$reference_option_limit_settings, $field_names = array()) {
++  foreach ($reference_option_limit_settings as $settings) {
+     if (!empty($settings['fields_match'][$field_name_triggering])) {
+-      $selector = '#' . $settings['ajax_wrapper'];
+-      $html = render($form[$settings['field']]);
+-      $return['#commands'][] = ajax_command_replace($selector, $html);
++      $field_names[$settings['field']] = $settings;
++      $field_names += reference_option_limit_triggering_chain($settings['field'], $reference_option_limit_settings, $field_names);
+     }
+   }
+-  return $return;
++  return $field_names;
+ }
+ 
+ /**

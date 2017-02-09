@@ -21,6 +21,14 @@ function elfinder_fckeditor_elfinder_editor_plugin($options) {
             'ImageBrowserURL' => $options['elfinder_url'],
             'FlashBrowser' => TRUE,
             'FlashBrowserURL' => $options['elfinder_url'],
+            'ImageUpload' => TRUE,
+            'ImageUploadURL' => url('elfinder/upload/fckeditor'),
+            'FlashUpload' => TRUE,
+          //  'FlashUploadURL' => $options['elfinder_connector_url'],
+            'LinkUpload' => TRUE,
+          //  'LinkUploadURL' => $options['elfinder_connector_url'],
+            
+
           ),
           'load' => FALSE,
         ),

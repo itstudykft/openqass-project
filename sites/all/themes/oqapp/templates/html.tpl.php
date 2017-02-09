@@ -48,9 +48,14 @@
 
 <head profile="<?php print $grddl_profile; ?>">
   <?php print $head; ?>
-  <title><?php print $head_title; ?></title>
+
   <?php print $styles; ?>
+
+  <title><?php print $head_title; ?></title>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
   <?php print $scripts; ?>
+  <script type="text/javascript" src="//code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes;?>>
   <div id="skip-link">
